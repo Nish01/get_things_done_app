@@ -1,4 +1,4 @@
-# flut
+# get_things_done
 
 A new Flutter project.
 
