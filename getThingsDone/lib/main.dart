@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'favoritesPage.dart';
 import 'historyList.dart';
+import 'homeListPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MyAppState(),
       child: MaterialApp(
-        title: 'Namer App',
+        title: 'Get Things Done App',
         theme: ThemeData(
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreenAccent),
@@ -76,9 +77,12 @@ class _MyHomePageState extends State<MyHomePage> {
     Widget page;
     switch (selectedIndex) {
       case 0:
-        page = GeneratorPage();
+        page = HomeListPage();
         break;
       case 1:
+        page = GeneratorPage();
+        break;
+      case 2:
         page = FavoritesPage();
         break;
       default:
